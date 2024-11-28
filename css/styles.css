@@ -1,0 +1,125 @@
+html{
+  scroll-behavior: smooth;
+}
+
+/* Hero Section Styles */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url("../img/banner.png") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Más opaco para mejor contraste */
+  z-index: 1;
+}
+
+.hero .content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 4rem; /* Tamaño mayor */
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.2; /* Mejor separación */
+}
+
+.hero p {
+  font-size: 1.75rem; /* Más grande para mejor legibilidad */
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem; /* Tamaño mayor */  
+  }
+}
+
+.btn-custom {
+  background-color: #ffa6ed; /* Color principal */
+  color: white;
+  padding: 12px 25px;
+  border: 2px solid white;
+  border-radius: 30px;
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+#botonA{
+  transition: .5s;
+}
+
+#botonA:hover{
+  scale: 1.1;
+  transition: .5s;
+}
+
+.hero a {
+  background: #ffa6ed;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.hero a:hover {
+  background: #ffa6ed;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
+  gap: 25px; /* Espacio entre las imágenes */
+}
+
+@media (max-width: 991px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+  }
+}
+
+@media (max-width: 575px) {
+  .gallery-grid {
+    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+  }
+}
+
+.gallery-grid img {
+  width: 100%; /* Las imágenes ocupan todo el ancho del contenedor */
+  height: auto; /* Conserva la proporción original */
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+#gallery h5 {
+  text-align: center; /* Centra el texto */
+  margin-bottom: 20px; /* Espacio debajo */
+  font-size: 1.25rem; /* Tamaño del texto */
+  color: #6c757d; /* Color gris para un subtítulo */
+}
+
+
