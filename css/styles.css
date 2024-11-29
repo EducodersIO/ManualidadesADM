@@ -99,11 +99,14 @@ html{
 @media (max-width: 575px) {
   .gallery-grid {
     grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
 .gallery-grid img {
-  width: 100%; /* Las imágenes ocupan todo el ancho del contenedor */
+  width: 75%; /* Las imágenes ocupan todo el ancho del contenedor */
   height: auto; /* Conserva la proporción original */
   display: block;
   border-radius: 10px;
